@@ -1,5 +1,5 @@
 {% extends "./page.html" %}
 
 {% block body %}
-<div id="pdf-footer" class="pdf-footer"><span class="sub">{{ config.title }} | Published: 12/12/2015 | Updated: 27/05/2016 | Marko Manninen &copy; 2016</span> <span class="footer-pages-count"> {{ page.num }} / {{ config.totalpages }} </span></div><script>if ({{ page.num }} == {{ config.totalpages }}) document.getElementById('pdf-footer').style.display = 'none'</script>
+<div id="pdf-footer" class="pdf-footer"><span class="sub">{{ config.title }} | Published: 12/01/2016 | Updated: {{ file.mtime|dateparse("m/d/Y") }} | Marko Manninen &copy; 2016</span> <span class="footer-pages-count"> {{ page.num }} / {{ config.totalpages }} </span></div><script>if ({{ page.num }} == {{ config.totalpages }}) document.getElementById('pdf-footer').style.display = 'none'</script>
 {% endblock %}
