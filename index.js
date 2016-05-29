@@ -185,7 +185,7 @@ Date.prototype.format = function(dateFormat){
 module.exports = {
 	filters: {
         dateparse: function(time, format) {
-        	return Date(Date.parse(time)).format(format);
+        	return new Date(Date.parse(time)).format(format);
         }
     },
     hooks: {
