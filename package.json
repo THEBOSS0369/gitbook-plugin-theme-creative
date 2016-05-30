@@ -2,7 +2,7 @@
   "name": "gitbook-plugin-theme-creative",
   "description": "PDF Extended theme for GitBook project: Creative Power of the Flower of Life",
   "main": "./index.js",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "engines": {
     "gitbook": ">=3.0.0"
   },
@@ -86,7 +86,7 @@
   },
   "gitHead": "212a5d3aa695b50701c05aced41c9e415a81901b",
   "homepage": "https://github.com/markomanninen/gitbook-plugin-theme-creative#readme",
-  "_id": "gitbook-plugin-theme-creative@1.0.5",
+  "_id": "gitbook-plugin-theme-creative@1.0.6",
   "_shasum": "fea25924f88dd6b6b533c493ece450bc469ceb4d",
   "_from": "gitbook-plugin-theme-creative@",
   "_npmVersion": "3.7.5",
@@ -97,7 +97,7 @@
   },
   "dist": {
     "shasum": "fea25924f88dd6b6b533c493ece450bc469ceb4d",
-    "tarball": "https://registry.npmjs.org/gitbook-plugin-theme-creative/-/gitbook-plugin-theme-creative-1.0.5.tgz"
+    "tarball": "https://registry.npmjs.org/gitbook-plugin-theme-creative/-/gitbook-plugin-theme-creative-1.0.6.tgz"
   },
   "maintainers": [
     {
@@ -107,8 +107,8 @@
   ],
   "_npmOperationalInternal": {
     "host": "packages-16-east.internal.npmjs.com",
-    "tmp": "tmp/gitbook-plugin-theme-creative-1.0.5.tgz_1464189138383_0.8807016278151423"
+    "tmp": "tmp/gitbook-plugin-theme-creative-1.0.6.tgz_1464189138383_0.8807016278151423"
   },
   "directories": {},
-  "_resolved": "https://registry.npmjs.org/gitbook-plugin-theme-creative/-/gitbook-plugin-theme-creative-1.0.5.tgz"
+  "_resolved": "https://registry.npmjs.org/gitbook-plugin-theme-creative/-/gitbook-plugin-theme-creative-1.0.6.tgz"
 }
