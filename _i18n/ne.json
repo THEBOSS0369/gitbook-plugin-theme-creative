@@ -1,0 +1,22 @@
+{
+    "LANGS_CHOOSE": "भाषा रोज्नुहोस्",
+    "GLOSSARY": "शब्दकोष",
+    "GLOSSARY_INDEX": "अनुक्रमणिका",
+    "GLOSSARY_OPEN": "शब्दकोष",
+    "GITBOOK_LINK": "गिटबुकसँग प्रकाशित",
+    "SUMMARY": "सामग्री तालिका",
+    "SUMMARY_INTRODUCTION": "परिचय",
+    "SUMMARY_TOGGLE": "सामग्री तालिका",
+    "SEARCH_TOGGLE": "खोजी गर्नुहोस्",
+    "SEARCH_PLACEHOLDER": "खोजी गर्न टाइप गर्नुहोस्",
+    "SEARCH_RESULTS_TITLE": "<span class='search-results-count'></span> परिणाम मिल्दो जुल्दो \"<span class='search-query'></span>\"",
+    "SEARCH_NO_RESULTS_TITLE": "कुनै परिणाम मिल्दो जुल्दो छैन \"<span class='search-query'></span>\"",
+    "FONTSETTINGS_TOGGLE": "फन्ट सेटिङ",
+    "SHARE_TOGGLE": "सेयर",
+    "SHARE_ON": "{{platform}} मा सेयर गर्नुहोस्",
+    "FONTSETTINGS_WHITE": "सेतो",
+    "FONTSETTINGS_SEPIA": "सेपिया",
+    "FONTSETTINGS_NIGHT": "नाइट",
+    "FONTSETTINGS_SANS": "स्यान्स",
+    "FONTSETTINGS_SERIF": "सेरीफ"
+}
