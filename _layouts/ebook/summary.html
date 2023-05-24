@@ -1,14 +1,25 @@
 {% extends "./page.html" %}
 
 {% block title %}{{ "SUMMARY"|t }}{% endblock %}
+    
+{% macro calculatePage(articlePage) %}
+    {% if articlePage and articlePage.pageNumber %}
+        {{ articlePage.pageNumber }}
+    {% endif %}
+{% endmacro %}
+{% macro calculatePageChapter(articlePage) %}
+    {% if articlePage and articlePage.chapter %}
+        {{ articlePage.chapter ~ "." }}
+    {% endif %}
+{% endmacro %}
 
-{% macro articles(_articles) %}
+{% macro subArticles(_articles) %}
     {% for article in _articles %}
         <li>
             <span class="inner">
                 {% if article.path or article.url %}
                     {% if article.path %}
-                        <a href="{{ article.path|contentURL }}{{ article.anchor }}">{{ article.title }}</a>
+                        <a href="{{ article.path|contentURL }}{{ article.anchor }}">{{ calculatePageChapter(getPageByPath(article.path)) }}{{ loop.index }} {{ article.title }}</a>
                     {% else %}
                         <a target="_blank" href="{{ article.url }}">{{ article.title }}</a>
                     {% endif %}
@@ -16,12 +27,38 @@
                     <span>{{ article.title }}</span>
                 {% endif %}
                 {% if 1 %}
-                <span class="page">{{ article.level }}</span>
+                <span class="page">{{ calculatePage(getPageByPath(article.path))}}</span>
                 {% endif %}
             </span>
             {% if article.articles.length > 0 %}
             <ol>
                 {{ articles(article.articles) }}
+            </ol>
+            {% endif %}
+        </li>
+    {% endfor %}
+{% endmacro %}
+
+{% macro articles(_articles) %}
+    {% for article in _articles %}
+        <li>
+            <span class="inner">
+                {% if article.path or article.url %}
+                    {% if article.path %}
+                        <a href="{{ article.path|contentURL }}{{ article.anchor }}">{{ calculatePageChapter(getPageByPath(article.path))}} {{ article.title }}</a>
+                    {% else %}
+                        <a target="_blank" href="{{ article.url }}">{{ article.title }}</a>
+                    {% endif %}
+                {% else %}
+                    <span>{{ article.title }}</span>
+                {% endif %}
+                {% if 1 %}
+                <span class="page">{{ calculatePage(getPageByPath(article.path))}}</span>
+                {% endif %}
+            </span>
+            {% if article.articles.length > 0 %}
+            <ol>
+                {{ subArticles(article.articles) }}
             </ol>
             {% endif %}
         </li>
