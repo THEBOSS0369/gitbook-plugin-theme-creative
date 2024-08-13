@@ -44,10 +44,6 @@
         <div class="body-inner">
             {% block book_inner %}
             {% include "website/header.html" %}
-
-
-
-
             <div class="page-wrapper" tabindex="-1" role="main">
                 <div class="page-inner">
                     {% block search_results %}
@@ -71,7 +67,6 @@
                             <pre id="output"
                                 style="background-color: #f8f9fa; padding: 15px; border-radius: 5px; border: 1px solid #ddd; color: #212529; white-space: pre-wrap; word-wrap: break-word; font-size: 16px; font-family: 'Courier New', Courier, monospace; box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.05);"></pre>
                         </div>
-
 
                         {% endblock %}
                     </section>
@@ -100,12 +95,28 @@
         {% endblock %}
     </div>
 
-    <script src="interpreter.js"></script>
 
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function () {
             gitbook.page.hasChanged({{ template.getJSContext() | dump | safe }});
+        });
+
+        //JS Interpreter Code
+        document.addEventListener('DOMContentLoaded', function () {
+            var runButton = document.getElementById('run');
+            var outputElement = document.getElementById('output');
+            var codeElement = document.getElementById('code');
+
+            runButton.addEventListener('click', function () {
+                try {
+                    var code = codeElement.value();
+                    var result = eval(code);
+                    outputElement.textContent = result;
+                } catch (error) {
+                    outputElement.textContent = 'Error' + error.message;
+                }
+            });
         });
 
     </script>
