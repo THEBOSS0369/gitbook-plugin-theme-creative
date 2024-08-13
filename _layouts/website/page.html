@@ -110,11 +110,11 @@
 
             runButton.addEventListener('click', function () {
                 try {
-                    var code = codeElement.value();
+                    var code = codeElement.value; // Getting code from textarea
                     var result = eval(code);
                     outputElement.textContent = result;
                 } catch (error) {
-                    outputElement.textContent = 'Error' + error.message;
+                    outputElement.textContent = 'Error:' + error.message;
                 }
             });
         });
